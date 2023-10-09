@@ -12,10 +12,13 @@ class UsersLogin(APIView):
         serial = LoginSerializer(data=data)
         if not serial.is_valid():
             return Response({"status": False,"Message": serial.errors})
-        user = authenticate(username= serial['username'],password = serial['password'])
+        username = serial.validated_data.get('username')
+        password = serial.validated_data.get('password')
+        user = authenticate(username= username,password = password)
         if not user:
             return Response({"status":False,"message":"Invalid Credentials"})
         token, _ = Token.objects.get_or_create(user=user)
-        return Response(token)
+        token_key = token.key
+        return Response({"Token": token_key})
 
         
