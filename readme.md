@@ -17,7 +17,7 @@
 
 - [X] - User authentication
 - [ ] - testing
-- [ ] - documentation using swagger UI
+- [x] - documentation using swagger UI
 - [x] - deployment
 
 ### API routes to use
