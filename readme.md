@@ -1,4 +1,7 @@
-# Django task manager
+# Django task manager assinged by TickTech IT Solutions
+
+- website link - https://taskmanager-ticktech.onrender.com/api/swagger/
+- docker image [link](https://hub.docker.com/repository/docker/varun8104/taskmanager-django/general)
 
 ### This task manager contains
 - name
